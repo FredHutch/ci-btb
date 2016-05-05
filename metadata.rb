@@ -6,5 +6,6 @@ description 'Installs/Configures ci-btb'
 long_description 'Installs/Configures ci-btb'
 version '0.1.0'
 
-depends 'packagecloud'
+depends 'apt'
+depends 'apt-chef'
 
