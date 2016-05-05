@@ -43,6 +43,7 @@ template '/var/spool/btb/.chef/knife.rb' do
     mode '0644'
 end
 
+include_recipe 'jenkins::master'
 
 #execute 'add local supermarket certs' do
 #    command "knife ssl fetch #{node['supermarket_uri']}"
