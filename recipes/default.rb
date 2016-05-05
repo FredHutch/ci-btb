@@ -21,7 +21,8 @@ package [ 'chefdk' ] do
 end
 
 gem_package 'knife-supermarket' do
-    gem_binary '/opt/chefdk/embedded/bin/gem'
+    gem_binary('/opt/chefdk/embedded/bin/gem')
+    options('--no-user-install')
 end
 
 user 'btb' do
