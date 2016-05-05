@@ -9,6 +9,5 @@ version '0.1.2'
 depends 'apt'
 depends 'apt-chef'
 depends 'jenkins', '~> 2.4.1'
-
-
+depends 'nginx',  '~> 2.7.7'
 
