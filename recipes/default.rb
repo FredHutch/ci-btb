@@ -43,6 +43,17 @@ template '/var/spool/btb/.chef/knife.rb' do
     mode '0644'
 end
 
+directory '/var/www' do
+    action :create
+    owner 'www-data'
+    mode '0755'
+end
+directory '/var/www/apps' do
+    action :create
+    owner 'www-data'
+    mode '0755'
+end
+include_recipe 'nginx::default'
 include_recipe 'jenkins::master'
 
 #execute 'add local supermarket certs' do
