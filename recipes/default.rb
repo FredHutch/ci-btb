@@ -16,7 +16,7 @@ apt_repository 'octopus_fhcrc' do
     deb_src         false
 end
 
-package [ 'chefdk' ] do
+package [ 'chefdk', 'git' ] do
     action :install
 end
 
