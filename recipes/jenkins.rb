@@ -10,18 +10,14 @@ include_recipe 'jenkins::master'
 
 ruby_block "Security off" do
   block do
-    Chef::Log.info "Waiting until Jenkins config.xml file is present"
-    until File.exist?("#{node['jenkins']['master']['home']}/config.xml")
-      sleep 1
-      Chef::Log.debug('.')
+    if File.exist?("#{node['jenkins']['master']['home']}/config.xml")
+        Chef::Log.warn "Turning off useSecurity in #{node['jenkins']['master']['home']}/config.xml"
+        fe = Chef::Util::FileEdit.new("#{node['jenkins']['master']['home']}/config.xml")
+        fe.search_file_replace_line(/  <useSecurity>true<\/useSecurity>/,
+                                    "  <useSecurity>false<\/useSecurity>")
+        fe.insert_line_if_no_match( /<bogus><\/bogus>/, "wheres waldo" )
+        fe.write_file
     end
-
-    Chef::Log.warn "Turning off useSecurity in #{node['jenkins']['master']['home']}/config.xml"
-    fe = Chef::Util::FileEdit.new("#{node['jenkins']['master']['home']}/config.xml")
-    fe.search_file_replace_line(/  <useSecurity>true<\/useSecurity>/,
-                                "  <useSecurity>false<\/useSecurity>")
-    fe.insert_line_if_no_match( /<bogus><\/bogus>/, "wheres waldo" )
-    fe.write_file
   end
   action :run
   #notifies :restart, 'service[jenkins]', :immediately
