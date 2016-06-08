@@ -22,5 +22,8 @@ node.override['nginx']['socketproxy']['apps'] = {
     }
 }
 
+node.default['jenkins']['master']['install_method'] = 'package'
+node.default['jenkins']['master']['jvm_options'] = '-Dhudson.diyChunking=false -Djenkins.install.runSetupWizard=false'
 
+node.default['java']['jdk_version'] = '7'
 
