@@ -10,4 +10,4 @@ depends 'apt'
 depends 'apt-chef'
 depends 'jenkins', '~> 2.5'
 depends 'nginx',  '~> 2.7.9'
-
+depends 'java'

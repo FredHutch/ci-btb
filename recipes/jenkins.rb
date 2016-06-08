@@ -3,6 +3,7 @@
 # Recipe:: jenkins
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
+include_recipe 'java'
 include_recipe 'jenkins::master'
 
 # Need to disable security
@@ -25,6 +26,18 @@ ruby_block "Security off" do
   action :run
   #notifies :restart, 'service[jenkins]', :immediately
 end
+
+# Jenkins plugins:
+#
+# ant
+# branch api
+# folders
+# github branch source
+# github 
+# pipeline: rest api
+# pipeline: stage view
+# ssh credentials
+# timestamper
 
 jenkins_ssh_slave 'knife-wks' do
     description 'Build on local host'
