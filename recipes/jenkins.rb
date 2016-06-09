@@ -15,8 +15,12 @@ jenkins_plugin 'ssh-slaves'
 jenkins_plugin 'branch-api'
 jenkins_plugin 'github'
 jenkins_plugin 'github-branch-source'
+jenkins_plugin 'github-oauth'
 jenkins_plugin 'timestamper'
+# NB: this currently doesn't seem to be installing plugins-
+#     its necessary to log into jenkins and go to the
+#     plugin manager page to complete this step
 # These cause errors:
-#jenkins_plugin 'workflow-aggregator '
-#jenkins_plugin 'cloudbees-folders'
+jenkins_plugin 'workflow-aggregator '
+jenkins_plugin 'cloudbees-folders'
 
