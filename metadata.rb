@@ -1,10 +1,10 @@
 name 'ci-btb'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Michael Gutteridge'
+maintainer_email 'mrg@fredhutch.org'
 license 'all_rights'
 description 'Installs/Configures ci-btb'
 long_description 'Installs/Configures ci-btb'
-version '0.1.11'
+version '0.1.12'
 
 depends 'apt'
 depends 'apt-chef'
