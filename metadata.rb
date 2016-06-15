@@ -4,7 +4,7 @@ maintainer_email 'mrg@fredhutch.org'
 license 'all_rights'
 description 'Installs/Configures ci-btb'
 long_description 'Installs/Configures ci-btb'
-version '0.1.13'
+version '0.1.14'
 
 depends 'apt'
 depends 'apt-chef'
