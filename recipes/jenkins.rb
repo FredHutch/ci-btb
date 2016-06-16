@@ -21,6 +21,5 @@ jenkins_plugin 'timestamper'
 #     its necessary to log into jenkins and go to the
 #     plugin manager page to complete this step
 # These cause errors:
-#jenkins_plugin 'workflow-aggregator '
-#jenkins_plugin 'cloudbees-folders'
-
+# jenkins_plugin 'workflow-aggregator '
+# jenkins_plugin 'cloudbees-folders'
