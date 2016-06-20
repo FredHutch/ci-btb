@@ -21,8 +21,13 @@ end
 
 group 'docker' do
   append true
-  members ['btb','jenkins']
+  members %w(btb jenkins)
   action :modify
+  notifies :restart, 'service[jenkins]', :delayed
+end
+
+service 'jenkins' do
+  action :nothing
 end
 
 gem_package 'kitchen-docker' do
