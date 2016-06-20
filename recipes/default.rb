@@ -7,6 +7,7 @@
 include_recipe 'ci-btb::packages'
 include_recipe 'ci-btb::users'
 include_recipe 'ci-btb::nginx'
+include_recipe 'ci-btb::docker'
 include_recipe 'ci-btb::jenkins'
 
 # execute 'add local supermarket certs' do

@@ -27,5 +27,3 @@ gem_package 'knife-supermarket' do
 end
 
 include_recipe 'java'
-
-include_recipe 'chef-apt-docker'
