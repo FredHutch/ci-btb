@@ -6,10 +6,8 @@
 #
 # Configure docker on the host for test kitchen use
 
-chef_gem 'chef-vault'
-require 'chef-vault'
-
-config = ChefVault::Item.load("docker", "config")
+include_recipe 'chef-vault'
+config = chef_vault_item("docker", "config")
 
 include_recipe 'chef-apt-docker'
 
@@ -21,3 +19,8 @@ docker_installation_package 'default' do
                   "-o Dpkg::Options::='--force-all'"
 end
 
+docker_registry 'https://index.docker.io/v1/' do
+  username config['username']
+  password config['password']
+  email config['email']
+end
