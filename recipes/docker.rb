@@ -21,8 +21,13 @@ end
 
 group 'docker' do
   append true
-  members ['btb']
+  members ['btb','jenkins']
   action :modify
+end
+
+gem_package 'kitchen-docker' do
+  gem_binary('/opt/chefdk/embedded/bin/gem')
+  options('--no-user-install')
 end
 
 docker_registry config['registry_url'] do
