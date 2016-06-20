@@ -19,6 +19,12 @@ docker_installation_package 'default' do
                   "-o Dpkg::Options::='--force-all'"
 end
 
+group 'docker' do
+  append true
+  members ['btb']
+  action :modify
+end
+
 docker_registry 'https://index.docker.io/v1/' do
   username config['username']
   password config['password']
