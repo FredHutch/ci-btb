@@ -25,7 +25,7 @@ group 'docker' do
   action :modify
 end
 
-docker_registry 'https://index.docker.io/v1/' do
+docker_registry config['registry_url'] do
   username config['username']
   password config['password']
   email config['email']
