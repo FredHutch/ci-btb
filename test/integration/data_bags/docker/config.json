@@ -1,5 +1,6 @@
 {
-    "username": "foo",
-    "password": "bar",
-    "email": "foo@bar.not"
+    "registry_url": "https://index.docker.io/v1/",
+    "username": "username",
+    "password": "password",
+    "email": "email@place.not"
 }
