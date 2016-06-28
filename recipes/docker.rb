@@ -7,7 +7,7 @@
 # Configure docker on the host for test kitchen use
 
 include_recipe 'chef-vault'
-config = chef_vault_item("docker", "config")
+config = chef_vault_item('docker', 'config')
 
 include_recipe 'chef-apt-docker'
 
