@@ -13,7 +13,7 @@ node('knife-wks') {
       submoduleCfg: [],
       userRemoteConfigs: [[
         credentialsId: '496afedc-73de-4c5f-8edd-1cd4a574185f',
-        url: 'git@github.com:FredHutch/congenial-happiness.git']]
+        url: 'git@github.com:FredHutch/ci-btb.git']]
     ]
     )
     stage 'Stage: Smoke Tests'
