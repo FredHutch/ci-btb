@@ -6,6 +6,14 @@
 
 include_recipe 'jenkins::master'
 
+# Add jenkins user to docker group
+group 'docker' do
+  append true
+  members 'jenkins'
+  action :modify
+  notifies :restart, 'service[jenkins]', :delayed
+end
+
 # Jenkins plugins:
 #
 jenkins_plugin 'ant'

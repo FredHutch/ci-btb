@@ -21,9 +21,8 @@ end
 
 group 'docker' do
   append true
-  members %w(btb jenkins)
+  members 'btb'
   action :modify
-  notifies :restart, 'service[jenkins]', :delayed
 end
 
 service 'jenkins' do
