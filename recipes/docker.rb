@@ -30,4 +30,3 @@ gem_package 'kitchen-docker' do
   gem_binary('/opt/chefdk/embedded/bin/gem')
   options('--no-user-install')
 end
-
