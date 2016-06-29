@@ -27,12 +27,6 @@ node('knife-wks') {
         eval "$(chef shell-init sh)"
         rubocop
     '''
-    stage 'Stage: Integration Testing'
-    echo 'Starting Test Kitchen'
-    sh '''
-        eval "$(chef shell-init sh)"
-        kitchen verify
-    '''
     stage 'Stage: Upload Check'
     // Upload cookbook to supermarket if:
     //    - it is on the production branch
