@@ -1,6 +1,7 @@
 ---
 driver:
-  name: vagrant
+  name: docker
+  use_sudo: false
   network:
       - ["forwarded_port", {guest: 80, host: 9081}]
       - ["forwarded_port", {guest: 8080, host: 9080}]
@@ -15,7 +16,6 @@ provisioner:
 
 platforms:
   - name: ubuntu-14.04
-  #- name: centos-7.1
 
 suites:
   - name: default
