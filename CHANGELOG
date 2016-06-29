@@ -1,0 +1,21 @@
+Changes for 0.1.17
+c93c5b7 removed test kitchen (see #4) from jenkins
+3838b4f fixes for rubocop
+5bbb8ff removing functions that break tests
+c8e9757 fixed trailing space
+54ee026 pulled out docker registry code
+495a62c Updated user configuration for docker
+0529891 restored apt to packages recipe- needed for https install method
+846d570 switched to docker in test kitchen
+07680a5 Removed references to octopus
+ce7bb8e fixed quoting for rubocop
+718cc5f updated git url
+e3d64b3 Merge tag '0.1.17' into dev
+14e89c5 Merge branch 'release/0.1.17' into prod
+a1e8807 bumped version for release
+8b1d370 reverted version
+8ac0f5e Added urls for source and issues
+2428e87 added jenkins automation
+31b66d9 Docker support for local jenkins build
+075547c Added jenkins to docker group for local builds
+44f561a Merge tag '0.1.16' into dev
