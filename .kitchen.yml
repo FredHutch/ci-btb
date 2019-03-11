@@ -1,0 +1,24 @@
+---
+driver:
+  name: docker
+  use_sudo: false
+  network:
+      - ["forwarded_port", {guest: 80, host: 9081}]
+      - ["forwarded_port", {guest: 8080, host: 9080}]
+
+provisioner:
+  name: chef_zero
+
+# Uncomment the following verifier to leverage Inspec instead of Busser (the
+# default verifier)
+# verifier:
+#   name: inspec
+
+platforms:
+  - name: ubuntu-14.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[ci-btb::default]
+    attributes:
